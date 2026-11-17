@@ -21,7 +21,6 @@ class Summarizer:
             reply = self.client.messages.create(
                 model=self.model,
                 max_tokens=300,
-                temperature=0.2,
                 system="Summarize these meeting notes in two sentences.",
                 messages=[{"role": "user", "content": piece}],
             )
